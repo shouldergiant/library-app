@@ -19,8 +19,9 @@ export default Controller.extend({
   actions:{
     saveMessage(){
       let email = this.get('emailAddress');
-      let message = this.store.createRecord('messages', {email: email, message: message});
-      message.save().then(response => {
+      let message = this.get('message');
+      let newMessage = this.store.createRecord('contact', {email: email, message: message});
+      newMessage.save().then(response => {
         this.set('responseMessage', "Thanks for the email, we'll respond asap!")
         this.set('message', '')
         this.set('emailAddress', '')

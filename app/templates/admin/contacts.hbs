@@ -1,0 +1,21 @@
+<div class="jumbotron text-center">
+    <h1>Messages via 'Contact Us'</h1>
+</div>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Message</th>
+    </tr>
+  </thead>
+<tbody>
+
+        {{#each model as |contact| }}
+        <tr>
+        <th>{{contact.email}}</th>
+        <th>{{contact.message}}</th>
+      </tr>
+        {{/each}}
+
+</tbody>
+</table>
