@@ -9,11 +9,11 @@
     </tr>
   </thead>
 <tbody>
-
         {{#each model as |contact| }}
         <tr>
         <th>{{contact.email}}</th>
-        <th>{{contact.message}}</th>
+        <th>{{contact.message}}<button class="btn btn-danger btn-xs pull-right"{{action 'deleteContactMessage' contact}}>Delete</button>
+</th>
       </tr>
         {{/each}}
 

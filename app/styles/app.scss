@@ -7,3 +7,11 @@ body{
 .cont-input {
   margin-bottom: 10px;
 }
+
+html{
+  overflow-y: scroll;
+}
+
+.library-item{
+  min-height: 150px;
+}
